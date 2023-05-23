@@ -1,11 +1,12 @@
 import "./Form.css";
-import { useState } from "react";
+import { useState, useRef } from "react";
 
 function Form(props) {
   const [name, updateName] = useState("");
   const [ingrediants, updateIngrediants] = useState("");
   const [method, updateMethod] = useState("");
   const [recipe, updateRecipe] = useState();
+  let id = useRef(0);
 
   function submitHandler(e) {
     e.preventDefault();
@@ -13,8 +14,10 @@ function Form(props) {
       recipeName: name,
       ingrediants: ingrediants,
       method: method,
+      id: id.current,
     };
     props.onSubmit(newRecipe);
+    id.current++;
     updateIngrediants("");
     updateMethod("");
     updateName("");

@@ -1,6 +1,9 @@
 import "./RecipeCard.css";
 
 function RecipeCard(props) {
+  function deleteRecipe() {
+    props.onRemove(props.index);
+  }
   return (
     <>
       <div className="recipe">
@@ -13,7 +16,7 @@ function RecipeCard(props) {
           <strong>Method: </strong>
           {props.method}
         </p>
-        <button class="delete-button" id={props.index}>
+        <button onClick={deleteRecipe} class="delete-button" id={props.index}>
           Delete
         </button>
       </div>

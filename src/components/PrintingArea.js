@@ -10,9 +10,11 @@ function PrintingArea(props) {
           {props.recipeArr.map(function (recipe) {
             return (
               <RecipeCard
+                onRemove={props.onRemove}
                 name={recipe.name}
                 ingrediants={recipe.ingrediants}
                 method={recipe.method}
+                index={recipe.id}
               ></RecipeCard>
             );
           })}

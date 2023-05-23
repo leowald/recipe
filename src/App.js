@@ -12,6 +12,14 @@ function App() {
     });
   }
 
+  function removeRecipe(id) {
+    updateRecipeArr(function (prev) {
+      return prev.filter(function (recipe) {
+        return recipe.id != id;
+      });
+    });
+  }
+
   return (
     <>
       <div className="heading">
@@ -19,7 +27,10 @@ function App() {
       </div>
       <div className="container">
         <Form onSubmit={addRecipe}></Form>
-        <PrintingArea recipeArr={recipeArr}></PrintingArea>
+        <PrintingArea
+          onRemove={removeRecipe}
+          recipeArr={recipeArr}
+        ></PrintingArea>
       </div>
     </>
   );
