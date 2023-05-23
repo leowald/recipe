@@ -1,3 +1,8 @@
 .right-side {
   width: 65%;
 }
+
+.right-side h3 {
+  font-size: larger;
+  font-weight: bold;
+}

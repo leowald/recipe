@@ -16,7 +16,11 @@ function RecipeCard(props) {
           <strong>Method: </strong>
           {props.method}
         </p>
-        <button onClick={deleteRecipe} class="delete-button" id={props.index}>
+        <button
+          onClick={deleteRecipe}
+          className="delete-button"
+          id={props.index}
+        >
           Delete
         </button>
       </div>
