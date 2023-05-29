@@ -1,5 +1,7 @@
 {
   "name": "recipe-app",
+  "homepage": "https://www.shalach-manos.com/php/",
+
   "version": "0.1.0",
   "private": true,
   "dependencies": {
