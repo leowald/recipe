@@ -23,7 +23,7 @@ function App() {
   return (
     <>
       <div className="heading">
-        <h1>Recipe App3</h1>
+        <h1>hello</h1>
       </div>
       <div className="container">
         <Form onSubmit={addRecipe}></Form>
